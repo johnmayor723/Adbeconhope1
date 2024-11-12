@@ -1,0 +1,121 @@
+.service-area {
+    background: #f8fcff;
+    .single-cat{
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 85px 22px;
+        @include transition(.4s);
+        position: relative;
+        z-index: 1;
+        @media #{$xs}{
+            padding: 50px 22px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0;
+            background:$theme-color;
+            transition: .6s;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: 6px;
+        }
+        .cat-icon{
+            span{
+                margin-bottom: 50px;
+                width: 90px;
+                height: 90px;
+                background: #09cc7f;
+                line-height: 90px;
+                text-align: center;
+                border-radius: 50%;
+                display: inline-block;
+                font-size: 40px;
+                color: #fff;
+            }
+        }
+        .cat-cap{
+            h5{
+             & > a{
+                font-size: 25px;
+                font-weight: 700;
+                margin-bottom: 21px;
+                display: block;
+                @include transition(.2s);
+                font-family:$font_2;
+                @media #{$sm}{
+                    font-size: 26px;
+                }
+                @media #{$xs}{
+                    font-size: 26px;
+                }
+              }
+            }
+            p{
+                margin-bottom: 36px;
+                color: #57667e;
+                font-size: 16px;
+                @include transition(.2s);
+                @media #{$sm}{
+                    font-size: 15px;
+
+                }
+            }
+            a{
+                color: #1c165c;
+                font-size: 16px;
+                font-weight: 600;
+                @include transition(.2s);
+            }
+        }
+
+
+        // Hover Effect In single 
+        &.active{
+            &::before {
+                height: 100%;
+            }
+            .cat-icon{
+            span{
+                color: $theme-color;
+                background:#fff;
+            }
+            }
+            .cat-cap{
+                h5{
+                    color: #fff;
+                }
+                p{
+                    color: #fff;
+                }
+                a{
+                    color: #fff;
+                }
+            }
+       }
+        &:hover{
+            &::before {
+                height: 100%;
+            }
+            .cat-icon{
+            span{
+                color: $theme-color;
+                background:#fff;
+            }
+            }
+            .cat-cap{
+                h5{
+                    color: #fff;
+                }
+                p{
+                    color: #fff;
+                }
+                a{
+                    color: #fff;
+                }
+            }
+       }
+    }
+}

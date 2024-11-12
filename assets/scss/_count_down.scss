@@ -1,0 +1,58 @@
+.count-down-area{
+    // @media #{$md}{
+    //     padding-bottom: 60px;
+    //     padding-top: 60px;
+    // }
+    // @media #{$sm}{
+    //     padding-bottom: 60px;
+    //     padding-top: 60px;
+    // }
+    // @media #{$xs}{
+    //     padding-bottom: 60px;
+    //     padding-top: 60px;
+    // }
+    .count-down-wrapper{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        .single-counter{
+            padding: 44px 10px 44px 9px;
+            margin-bottom: 30px;
+            .counter{
+                font-size: 40px;
+                font-family: "Muli",sans-serif;
+                line-height: 1;
+                margin-bottom: 12px;
+                display: inline-block;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #fff;
+            }
+            span{
+                color: #fff;
+                font-size: 24px;
+            }
+            p{
+                font-size: 20px;
+                line-height: 1;
+                margin: 0;
+                padding: 0;
+                font-weight: 300;
+                display: block;
+                font-family: $font_1;
+                color:#fff;
+
+            }
+        }
+    }
+}
+
+.color-blue{
+    color:#2d3092;
+}
+.color-green{
+    color:#1e9d78;
+}
+.color-red{
+    color:#f05510;
+}

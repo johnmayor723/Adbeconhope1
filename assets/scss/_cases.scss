@@ -1,0 +1,59 @@
+.our-cases-area{
+    background: #f8fcff;
+    .single-cases{
+        .cases-img{
+            overflow: hidden;
+            img{
+                width: 100%;
+                transform: scale(1.05);
+                @include transition(.4s);
+            }
+        }
+        .cases-caption{
+            padding: 24px 20px 10px 20px;
+            background: #fff;
+            h3{
+                a{
+                    font-size: 21px;
+                    font-weight: 800;
+                    line-height: 1.4;
+                    margin-bottom: 40px;
+                    display: block;
+                    @media #{$sm}{
+                        font-size: 16px;
+                    }
+                    @media #{$xs}{
+                        font-size: 16px;
+                    }
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+            .prices{
+                p{
+                    color: #072366;
+                    font-size: 12px;
+                    @media #{$xs}{
+                        font-size: 11px;
+                    }
+                    span{
+                        color: #072366;
+                        font-size: 16px;
+                        font-weight: 700;
+                        @media #{$sm}{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            .cases-img{
+                img{
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}

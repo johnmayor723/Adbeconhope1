@@ -1,0 +1,141 @@
+// Main Slider Height
+.slider-height {
+    height: 920px;
+    @media #{$lg}{
+        height: 700px;
+    }
+    @media #{$md}{
+        height: 650px;
+    }
+    @media #{$sm}{
+        height: 600px;
+    }
+    @media #{$xs}{
+        height: 500px;
+    }
+}
+// Another Page
+.slider-height2{
+    height: 365px;
+    background-size: cover;
+    @media #{$md}{
+        height: 350px;
+    }
+    @media #{$sm}{
+        height: 250px;
+    }
+    @media #{$xs}{
+        height: 250px;
+    }
+}
+
+.slider-area{
+    // margin-top: -1px;
+    background-image: url(../img/hero/h1_hero.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .hero__caption{
+        h1{
+            font-size: 70px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            color: #002d5b;
+            line-height: 1.2;
+            text-transform: capitalize;
+            margin-bottom: 29px;
+            @media #{$lg}{
+                font-size: 60px;
+                line-height: 1.2;
+            }
+            @media #{$md}{
+                font-size: 50px;
+                line-height: 1.2;
+            }
+            @media #{$sm}{
+                font-size: 35px;
+                line-height: 1.2;
+            }
+            @media #{$xs}{
+                font-size: 35px;
+                line-height: 1.2;
+            }
+        }
+         span{
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 300;
+            margin-bottom: 39px;
+            color: $theme_color;
+            margin-bottom: 37px;
+            text-transform: uppercase;
+            display: inline-block;
+            @media #{$xs}{
+                margin-bottom: 30px;
+            }
+        }
+         p{
+            color: #464d65;
+            margin-bottom: 42px;
+            @media #{$xs}{
+                padding-right: 56px;
+            }
+        }
+        .hero__btn {
+            @include flexbox();
+            @include align-items(center);
+            @include flex-wrap(wrap);
+        }
+    }
+
+}
+
+//overly
+.hero-overly {
+    position: relative;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        content: "";
+        background-color: rgba(1, 10, 28,  0.3);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-repeat: no-repeat;
+    }
+}
+
+// Another Hero Page
+.slider-area2{
+    background-image: url(../img/hero/hero2.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+    .hero-cap{
+        @media #{$md}{
+            padding-top: 50px;
+        }
+        @media #{$sm}{
+            padding-top: 50px;
+        }
+        @media #{$xs}{
+            padding-top: 50px;
+        }
+        h2{
+            color: #072366;
+            font-size: 50px;
+            font-weight: 800;
+            text-transform: capitalize;
+            line-height: 1;
+            @media #{$sm}{
+                font-size: 50px;
+              }
+            @media #{$xs}{
+                font-size: 35px;
+              }
+        }
+    }
+}
