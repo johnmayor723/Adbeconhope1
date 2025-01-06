@@ -99,7 +99,38 @@
     height: 300px; /* Sets a consistent height for all images */
     object-fit: cover; /* Ensures the image fills the container without distortion */
     border-radius: 8px; /* Optional: Adds rounded corners for aesthetics */
+} 
+		/* General Styling */
+.single-team .team-img img {
+    width: 100%; /* Full width of container */
+    height: 250px; /* Uniform height */
+    object-fit: cover; /* Maintain aspect ratio and cover area */
+    border-radius: 8px; /* Optional: Rounded corners */
 }
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.team-social li a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.team-social li a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+    .px-lg-5 {
+        padding: 0 !important; /* Remove padding on mobile */
+    }
+}
+
 
 	</style>
 </head>
@@ -490,92 +521,84 @@
 </div>
 <!-- Our Cases End -->
 
-    <!--? Team Area Start -->
-    <div class="team-area pt-160 pb-160">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
-                    <!-- Section Tittle -->
-                    <div class="section-tittle section-tittle2 text-center mb-70">
-                        <span></span>
-                        <h2>Our Team</h2>
-                    </div> 
+  <!-- Team Area Start -->
+<div class="team-area pt-160 pb-160">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+                <!-- Section Title -->
+                <div class="section-tittle section-tittle2 text-center mb-70">
+                    <span></span>
+                    <h2>Our Team</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-team mb-30">
-                        <div class="team-img">
-                            <img src="assets/images/aa12.jpg" alt="">
-                            <!-- Blog Social -->
-                            <ul class="team-social">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-caption">
-                            <h3><a href="instructor.html">Dr Adedoyin Olugbode</a></h3>
-                            <p> Chairman</p>
-                        </div>
+        </div>
+
+        <!-- First Row: Single Member (Centered on Desktop) -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="single-team mb-30 text-center px-lg-5 px-0">
+                    <div class="team-img">
+                        <img src="assets/images/aa12.jpg" alt="">
+                        <!-- Social Icons -->
+                        <ul class="team-social">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="team-caption">
+                        <h3><a href="instructor.html">Dr Adedoyin Olugbode</a></h3>
+                        <p>Chairman</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-team mb-30">
-                        <div class="team-img">
-                            <img src="assets/images/" alt="">
-                            <!-- Blog Social -->
-                            <ul class="team-social">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-caption">
-                            <h3><a href="instructor.html"></a></h3>
-                            <p> </p>
-                        </div>
+            </div>
+        </div>
+
+        <!-- Second Row: Remaining Members -->
+        <div class="row">
+            <!-- Member 1 -->
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="single-team mb-30 text-center">
+                    <div class="team-img">
+                        <img src="assets/images/Team2.jpg" alt="">
+                        <!-- Social Icons -->
+                        <ul class="team-social">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="team-caption">
+                        <h3><a href="instructor.html">Adeshida Oluwaseun</a></h3>
+                        <p>Trustee</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-team mb-30">
-                        <div class="team-img">
-                            <img src="assets/images/Team2.jpg" alt="">
-                            <!-- Blog Social -->
-                            <ul class="team-social">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-caption">
-                            <h3><a href="instructor.html">Adeshida Oluwaseun</a></h3>
-                            <p>Trustee</p>
-                        </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="single-team mb-30 text-center">
+                    <div class="team-img">
+                        <img src="assets/images/Team1.jpg" alt="">
+                        <!-- Social Icons -->
+                        <ul class="team-social">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="team-caption">
+                        <h3><a href="instructor.html">Fatokun Mathew</a></h3>
+                        <p>Secretary</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-team mb-30">
-                        <div class="team-img">
-                            <img src="assets/images/Team1.jpg" alt="">
-                            <!-- Blog Social -->
-                            <ul class="team-social">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-caption">
-                            <h3><a href="instructor.html">Fatokun Mathew</a></h3>
-                            <p>Secretary</p>
-                        </div>
-                    </div>
-                </div>
-               
             </div>
         </div>
     </div>
-    <!-- Team Ara End -->
+</div>
+<!-- Team Area End -->
+
     <!-- Want To work -->
     <section class="wantToWork-area ">
         <div class="container">
