@@ -94,7 +94,38 @@
         margin-bottom: 20px;
       }
     }
-	</style>
+		
+	
+    .primary-bg {
+        background-color: #2D7B30;
+    }
+    .btn_1 {
+        border: none;
+        font-size: 16px;
+        padding: 12px;
+        cursor: pointer;
+    }
+    .form-group input {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    .blog_area h2, .paypal-section h4 {
+        font-weight: bold;
+        color: #2D7B30;
+    }
+    .paypal-section form {
+        margin-top: 15px;
+    }
+</style>
 </head>
 <body>
     <!-- ? Preloader Start -->
@@ -219,44 +250,53 @@
         
         <!--? Blog Area Start-->
         <section class="blog_area section-padding">
-            <div class="container">
-                <h2>Make a Difference Today!</h2>
-              <p style="margin-top:40px">
-Your contribution can transform lives. By donating, you join us in providing hope, resources, and a brighter future for those in need. Every donation, big or small, brings us closer to a world where everyone has access to basic necessities and opportunities for a better life. Together, we can make a lasting impact. Thank you for your kindness and generosity!
-
-
-              </p>
-		    <div class="row">
-      
-                    <div class="col-sm-12 col-md-6">
-                        <div class="blog_right_sidebar">
-             
-                            <aside class="single_sidebar_widget newsletter_widget">
-                                <h2>Please contact us. Together, we can make a bigger impact!</h2>
-                                <form action="#">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
-                                    </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Support us</button>
-                                </form>
-                            </aside>
-                        </div>
-		    </div>
-		    <div class="col-sm-12 col-md-6">
-                     <p>
-			Donations can be made to following account bank details:<br>
-			Bank Name: Adedoyinbeaconofhopefoundation.<br>
-                        MONIEPOINT NAIRA ACCOUNT: 08143074296<br>
-                        UBA NAIRA ACCOUNT :1027784782<br>
-                        UBA DOLLAR ACCOUNT USD: 3004671474
-		     </p>
-		    </div>
-		 </div>	    
+    <div class="container">
+        <h2>Make a Difference Today!</h2>
+        <p style="margin-top:40px">
+            Your contribution can transform lives. By donating, you join us in providing hope, resources, and a brighter future for those in need. Every donation, big or small, brings us closer to a world where everyone has access to basic necessities and opportunities for a better life. Together, we can make a lasting impact. Thank you for your kindness and generosity!
+        </p>
+        <div class="row">
+            <!-- Contact Form Section -->
+            <div class="col-sm-12 col-md-6">
+                <div class="blog_right_sidebar">
+                    <aside class="single_sidebar_widget newsletter_widget">
+                        <h2>Please contact us. Together, we can make a bigger impact!</h2>
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
+                            </div>
+                            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                type="submit">Support us</button>
+                        </form>
+                    </aside>
                 </div>
             </div>
-        </section>
+            <!-- Donation Details and PayPal Option -->
+            <div class="col-sm-12 col-md-6">
+                <p>
+                    Donations can be made to the following account bank details:<br>
+                    <strong>Bank Name:</strong> Adedoyinbeaconofhopefoundation<br>
+                    <strong>MONIEPOINT NAIRA ACCOUNT:</strong> 08143074296<br>
+                    <strong>UBA NAIRA ACCOUNT:</strong> 1027784782<br>
+                    <strong>UBA DOLLAR ACCOUNT USD:</strong> 3004671474
+                </p>
+                <div class="paypal-section" style="margin-top: 20px;">
+                    <h4>Donate via PayPal</h4>
+                    <form action="https://www.paypal.me/Teebae234?locale.x=en_CA" method="get" target="_blank">
+                        <div class="form-group">
+                            <label for="donationAmount" style="font-weight: bold;">Enter Amount (USD):</label>
+                            <input type="number" id="donationAmount" name="amount" class="form-control" min="1" placeholder="Enter amount" required>
+                        </div>
+                        <button type="submit" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn">Donate with PayPal</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
         <!-- Blog Area End -->
     </main>
     <footer>
