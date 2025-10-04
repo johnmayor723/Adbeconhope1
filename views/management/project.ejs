@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+  <title>Create Project</title>
+  <script>
+    function addImageInput() {
+      const container = document.getElementById('imageInputs');
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.name = 'images';
+      input.className = 'form-control mb-2';
+      container.appendChild(input);
+    }
+  </script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Create Project</h1>
+    <form action="/admin/projects" method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" name="title" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea name="description" class="form-control" rows="4" required></textarea>
+      </div>
+      <div id="imageInputs">
+        <label class="form-label">Upload Images</label>
+        <input type="file" name="images" class="form-control mb-2">
+      </div>
+      <button type="button" onclick="addImageInput()" class="btn btn-secondary mb-3">+ Add More Images</button>
+      <br>
+      <button type="submit" class="btn btn-success">Save Project</button>
+    </form>
+  </div>
+</body>
+</html>
+

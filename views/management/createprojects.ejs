@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+  <title>Projects</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">All Projects</h1>
+    <a href="/management/projects/create" class="btn btn-success mb-3">+ Add New Project</a>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Images</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% projects.forEach(project => { %>
+          <tr>
+            <td><%= project.title %></td>
+            <td><%= project.description %></td>
+            <td>
+              <% project.images.forEach(img => { %>
+                <img src="/uploads/<%= img %>" alt="Image" width="60" class="me-1 mb-1">
+              <% }) %>
+            </td>
+            <td>
+              <a href="/management/projects/<%= project._id %>/edit" class="btn btn-warning btn-sm">Edit</a>
+              <form action="/management/projects/<%= project._id %>?_method=DELETE" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

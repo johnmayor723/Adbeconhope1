@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+  <title>Admin Dashboard</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Admin Dashboard</h1>
+
+    <div class="jumbotron p-5 bg-light rounded shadow-sm">
+      <h2>View Projects</h2>
+      <p>See all your projects in one place.</p>
+      <a href="/admin/projects" class="btn btn-primary">Go to Projects</a>
+    </div>
+
+    <div class="jumbotron p-5 bg-light rounded shadow-sm">
+      <h2>Create Project</h2>
+      <p>Add a new project with title, description, and images.</p>
+      <a href="/admin/projects/create" class="btn btn-success">Create Project</a>
+    </div>
+  </div>
+</body>
+</html>

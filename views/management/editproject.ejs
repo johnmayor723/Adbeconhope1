@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+  <title>Edit Project</title>
+  <script>
+    function addImageInput() {
+      const container = document.getElementById('newImageInputs');
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.name = 'newImages';
+      input.className = 'form-control mb-2';
+      container.appendChild(input);
+    }
+    function removeImage(id) {
+      document.getElementById('remove-' + id).value = "true";
+      document.getElementById('img-' + id).style.display = "none";
+    }
+  </script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Edit Project</h1>
+    <form action="/admin/projects/<%= project._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" name="title" value="<%= project.title %>" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea name="description" class="form-control" rows="4" required><%= project.description %></textarea>
+      </div>
+
+      <h5>Current Images</h5>
+      <div class="row mb-3">
+        <% project.images.forEach((img, index) => { %>
+          <div class="col-md-3 text-center" id="img-<%= index %>">
+            <img src="/uploads/<%= img %>" class="img-fluid mb-2">
+            <input type="hidden" name="removeImages[<%= index %>]" id="remove-<%= index %>" value="false">
+            <button type="button" class="btn btn-danger btn-sm" onclick="removeImage(<%= index %>)">Remove</button>
+          </div>
+        <% }) %>
+      </div>
+
+      <h5>Add New Images</h5>
+      <div id="newImageInputs">
+        <input type="file" name="newImages" class="form-control mb-2">
+      </div>
+      <button type="button" onclick="addImageInput()" class="btn btn-secondary mb-3">+ Add More Images</button>
+
+      <br>
+      <button type="submit" class="btn btn-primary">Update Project</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+   <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background-color: #fff;
+    }
+
+    /* Navbar */
+    header {
+      background: #0a0a3b;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fdbb2d;
+    }
+
+    .donate-btn {
+      background: #fdbb2d;
+      color: #000;
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
+    .projects {
+      background: #14144d;
+      color: #fff;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .projects h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #fdbb2d;
+    }
+
+    .projects p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1rem;
+    }
+
+    /* Image Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+      padding: 20px;
+      background: #14144d;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    /* Footer */
+    footer {
+      background: #fff;
+      color: #222;
+      padding: 30px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+
+    footer div {
+      flex: 1;
+      margin: 10px;
+      min-width: 200px;
+    }
+
+    footer a {
+      color: #0a0a3b;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .newsletter input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .newsletter button {
+      background: #0a0a3b;
+      color: #fff;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .newsletter button:hover {
+      background: #fdbb2d;
+      color: #000;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav ul {
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+ <section class="projects">
+    <h2>Our Projects</h2>
+    <p>
+      I'm a paragraph. Click here to edit and add your own text. 
+      It's easy! Just click on "Edit Text" or double-click on me and 
+      you can add your own content and change fonts.
+    </p>
+  </section>
+
+  <!-- Image Grid -->
+  <section class="grid">
+    <img src="https://placehold.co/600x400?text=Tiger" alt="Tiger">
+    <img src="https://placehold.co/600x400?text=Lizard" alt="Lizard">
+    <img src="https://placehold.co/600x400?text=Bird" alt="Bird">
+    <img src="https://placehold.co/600x400?text=Snake" alt="Snake">
+    <img src="https://placehold.co/600x400?text=Landscape" alt="Landscape">
+  </section>
